@@ -1,6 +1,8 @@
+import 'dart:math';
+
 class Segitiga {
-  double? alas;
-  double? tinggi;
+  double alas;
+  double tinggi;
   String? jenis;
 
   // Named Constructor untuk jenis siku-siku
@@ -8,8 +10,18 @@ class Segitiga {
     jenis = "Siku-siku";
   }
 
+  // Method untuk menghitung Luas
+  double hitungLuas() {
+    return 0.5 * alas * tinggi;
+  }
+
   void cetakInfo() {
-    print("Jenis: $jenis, Alas: $alas, Tinggi: $tinggi");
+    print("--- Informasi Segitiga ---");
+    print("Jenis          : $jenis");
+    print("Alas           : $alas cm");
+    print("Tinggi         : $tinggi cm");
+    print("Luas           : ${hitungLuas().toStringAsFixed(2)} cm²");
+    print("---------------------------\n");
   }
 }
 
